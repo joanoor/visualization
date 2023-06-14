@@ -1,0 +1,9 @@
+.el-tag.el-tag--info {
+    --el-tag-text-color: $c-text-4 !important;
+}
+
+.el-tag {
+    .el-tag__content {
+        font-size: 14px !important;
+    }
+}

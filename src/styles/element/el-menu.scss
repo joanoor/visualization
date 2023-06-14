@@ -1,0 +1,7 @@
+.el-menu {
+  border-right: none !important;
+}
+
+.el-sub-menu.is-active>div.el-sub-menu__title {
+  color: var(--el-menu-active-color);
+}

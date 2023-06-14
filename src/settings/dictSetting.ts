@@ -1,0 +1,15 @@
+// 请求的字典
+export const DICT_FIELDS = [
+  'STATUS',
+  'USER_TYPE',
+  'AUTHORITY_TYPE',
+  'MENU_TYPE',
+  'VISIBILITY',
+  'ONLINE_STATUS',
+  'LOGIN_STATUS',
+  'OPERATE_TYPE',
+  'OPERATOR_STATUS',
+  'OPERATE_SOURCE',
+  'AIR_TYPE',
+  'COMM_MODE',
+] as const

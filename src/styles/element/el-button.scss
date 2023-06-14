@@ -1,0 +1,22 @@
+@use '../modules/variables' as *;
+
+.el-button--info {
+  --el-button-text-color: #{$c-text-4};
+  --el-button-bg-color: var(--el-color-info);
+  --el-button-border-color: var(--el-color-info);
+  --el-button-outline-color: var(--el-color-info-light-5);
+  --el-button-active-color: var(--el-color-info-dark-2);
+  --el-button-hover-text-color: #{$c-fill-5};
+  --el-button-hover-link-text-color: var(--el-color-info-light-5);
+  --el-button-hover-bg-color: var(--el-color-info-light-3);
+  --el-button-hover-border-color: var(--el-color-info-light-3);
+  --el-button-active-bg-color: var(--el-color-info-dark-2);
+  --el-button-active-border-color: var(--el-color-info-dark-2);
+  --el-button-disabled-text-color: #{$c-text-2};
+  --el-button-disabled-bg-color: var(--el-color-info-light-5);
+  --el-button-disabled-border-color: var(--el-color-info-light-5);
+}
+
+.el-button {
+  transition: width 0.3s;
+}

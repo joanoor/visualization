@@ -1,0 +1,18 @@
+.nrzt-messagebox {
+  padding: 16px !important;
+
+  .el-message-box__content {
+    padding: 0px !important;
+  }
+
+  .el-message-box__btns {
+    padding: 0px !important;
+  }
+
+  .el-message-box__container {
+    .el-message-box__status {
+      top: 0px !important;
+      transform: translateY(0px) !important;
+    }
+  }
+}
