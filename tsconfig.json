@@ -5,6 +5,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "types": [
+      "node",
       "element-plus/global",
       "@nrzt/configs/global"
     ],
