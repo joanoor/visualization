@@ -5,7 +5,11 @@
     :page-sizes="pageSizes"
     :layout="layout"
     :total="total"
-    flex justify-end pr-4
+    prev-text="上一页"
+    next-text="下一页"
+    flex
+    justify-center
+    pr-4
   ></el-pagination>
 </template>
 
@@ -26,7 +30,7 @@ const props = withDefaults(
     pageSizes: () => [10, 30, 50, 100],
     current: 1,
     size: 10,
-    layout: 'total, prev, pager, next, sizes',
+    layout: 'total, prev, pager, next',
   }
 )
 

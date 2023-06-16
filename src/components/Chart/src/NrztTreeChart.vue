@@ -1,18 +1,30 @@
 <template>
-  <div w-full h-full class="chart-container" v-loading="loading" element-loading-text="图表数据载入中">
-    <el-empty v-if="chartData?.length === 0" w-full h-full :image-size="100" description="暂无图表" />
+  <div
+    w-full
+    h-full
+    class="chart-container"
+    v-loading="loading"
+    element-loading-text="图表数据载入中"
+  >
+    <el-empty
+      v-if="chartData?.length === 0"
+      w-full
+      h-full
+      :image-size="100"
+      description="暂无图表"
+    />
     <div ref="chartRef" w-full h-full v-else></div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { createChart, ChartType, IChart } from '@nrzt/chart'
-import echarts from '@nrzt/chart'
+import { EChartsOption } from 'echarts'
 interface ChartProps<T = any> {
   chartData?: T[]
   dimensions?: string[]
   chartType: ChartType
-  chartOption?: echarts.EChartsOption
+  chartOption?: EChartsOption
   loading: boolean
   callback?: (chart: IChart) => void
 }

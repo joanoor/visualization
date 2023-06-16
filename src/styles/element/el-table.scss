@@ -1,10 +1,40 @@
 .iemp-table-header {
+  background-color: transparent !important;
+
   .el-table__cell {
-    background-color: $c-fill-2 !important;
-    color: $c-text-5 !important;
-    font-size: 14px;
+    background-color: rgba(84, 133, 226, 0.3) !important;
+    font-family: Source Han Sans CN;
+    color: #a7cdfa;
+    font-size: 16px;
     font-weight: 500;
     height: 22px;
     line-height: 22px;
   }
+}
+
+.el-table__body tr:hover>td {
+  background-color: rgba(67, 230, 237, 0.45) !important;
+  color: white !important
+}
+
+
+
+.iemp-table-row {
+  background: transparent !important;
+  color: rgba(167, 205, 250, 1) !important;
+  border-bottom: none !important;
+
+  &.el-table__row--striped {
+    background-color: rgba(84, 133, 226, 0.18) !important;
+    // color: white !important;
+  }
+}
+
+.el-table {
+  background: transparent !important;
+}
+
+.el-table__cell {
+  background: transparent !important;
+  border: none !important;
 }

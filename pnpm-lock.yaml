@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@element-plus/icons-vue':
     specifier: ^2.1.0
@@ -10,9 +14,6 @@ dependencies:
   '@nrzt/chart':
     specifier: ^2.1.3
     version: 2.1.3(@types/element-resize-detector@1.1.3)(@types/lodash-es@4.17.7)(dayjs@1.11.8)(echarts@5.4.2)(element-resize-detector@1.2.4)(lodash-es@4.17.21)(xlsx@0.18.5)
-  '@nrzt/cipher':
-    specifier: ^2.1.2
-    version: 2.1.2
   '@nrzt/configs':
     specifier: ^2.1.2
     version: 2.1.2
@@ -6500,7 +6501,3 @@ packages:
     dependencies:
       tslib: 2.3.0
     dev: false
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false

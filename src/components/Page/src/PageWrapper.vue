@@ -1,16 +1,26 @@
 <template>
-  <div flex-1 class="pagewrapper" absolute inset-0>
-    <slot></slot>
-  </div>
+  <ScaleScreen
+    :width="2304"
+    :wrapper-style="wrapperStyle"
+    :box-style="boxStyle"
+  >
+    <div flex-1 class="pagewrapper" relative>
+      <Header></Header>
+      <slot></slot>
+    </div>
+  </ScaleScreen>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { CSSProperties } from 'vue'
+import { ScaleScreen } from '@/components/ScaleScreen'
+import Header from '@/views/dashboard/components/Header.vue'
 
-<style scoped lang="scss">
-.pagewrapper {
-  width: 2304px;
+const wrapperStyle = ref<CSSProperties>({})
+const boxStyle = ref<CSSProperties>({
+  backgroundImage: 'linear-gradient(180deg, #0d3681 0%, #03143b 100%)',
+  overflow: 'hidden',
+})
+</script>
 
-  background-image: linear-gradient(180deg, #0d3681 0%, #03143b 100%);
-
-}
-</style>
+<style scoped lang="scss"></style>

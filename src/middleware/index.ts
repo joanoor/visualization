@@ -20,7 +20,6 @@ window.NProgress.configure({
 
 export function setupRouterGuard(router: Router) {
   if (router) {
-    console.log('开始八八八八')
     // 以下调用顺序不要发生变化
     createAuthRedirectGuard(router)
     createPageGuard(router)

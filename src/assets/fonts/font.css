@@ -4,3 +4,17 @@
    font-weight: normal;
    font-size: normal;
  }
+
+ @font-face {
+   font-family: 'DS-Digital';
+   src: url('./ds-digit/DS-DIGI-1.ttf');
+   font-weight: normal;
+   font-size: normal;
+ }
+
+ @font-face {
+   font-family: 'DIN Alternate';
+   src: url('./DIN-Alternate/DIN-Alternate.ttf');
+   font-weight: normal;
+   font-size: normal;
+ }

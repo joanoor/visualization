@@ -11,9 +11,6 @@ export function configHtmlPlugin(_env: ViteEnv, isBuild: boolean) {
         <link href="./js/nprogress.min.css" rel="stylesheet" />
            
         <!-- 2. 引入打印 -->
-        <script type="text/javascript">
-          console.log('我看下现在的环境', window)
-        </script>
         <script src="./js/print.js"></script>
 
         <!-- 3. 引入配置 -->

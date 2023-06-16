@@ -1,9 +1,13 @@
 <template>
   <el-table
     :data="tableData"
-    border
+    :stripe="stripe"
+    :border="border"
+    :highlight-current-row="highlight"
     v-loading="loading"
     header-row-class-name="iemp-table-header"
+    row-class-name="iemp-table-row"
+    cell-class-name="iemp-table-cell"
     @select-all="val => $emit('selectionAll', val)"
     @selection-change="val => $emit('selection', val)"
     ref="tableRef"
@@ -104,29 +108,14 @@
       </template>
     </el-table-column>
   </el-table>
-  <el-row mt-5>
-    <el-col :span="12">
-      <slot name="leftBottom">
-        <el-button
-          type="info"
-          size="default"
-          :icon="Download"
-          :disabled="tableData.length === 0"
-          @click="$emit('batchExport')"
-        >
-          {{ hasSelectedRow ? '导出所选' : '导出全部' }}
-        </el-button>
-      </slot>
-    </el-col>
-    <el-col :span="12">
-      <Pagination
-        v-if="showPagination"
-        v-model:current="currentPage"
-        v-model:size="pageSize"
-        :total="total"
-      ></Pagination>
-    </el-col>
-  </el-row>
+
+  <Pagination
+    mt-6
+    v-if="showPagination"
+    v-model:current="currentPage"
+    v-model:size="pageSize"
+    :total="total"
+  ></Pagination>
 </template>
 
 <script setup lang="ts">
@@ -153,6 +142,9 @@ const props = withDefaults(
     loading: boolean
     tableColumns?: ResultColumnsData<any>[]
     tableData?: Recordable[]
+    stripe?: boolean
+    border?: boolean
+    highlight?: boolean
     total?: number
     current?: number
     size?: number
@@ -168,6 +160,9 @@ const props = withDefaults(
   {
     tableColumns: () => [],
     tableData: () => [],
+    stripe: false,
+    border: true,
+    highlight: false,
     showPagination: true,
     tableHeight: 500,
     hasSelectedRow: true,

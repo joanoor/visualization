@@ -6,15 +6,15 @@
 
 <script setup lang="ts">
 import {
-  default as echarts,
   createChart,
   getDefaultChartOpt,
   IChart,
 } from '@nrzt/chart'
 import { renderChartNoData } from '@/utils'
+import { EChartsOption } from 'echarts';
 
 interface ChartProps {
-  option?: echarts.EChartsOption
+  option?: EChartsOption
   loading: boolean
   loadingText?: string
 }
